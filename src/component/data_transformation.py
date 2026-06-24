@@ -26,18 +26,44 @@ class DataTransformation:
         try:
             numerical_columns=[
                "age",
-               "Medu",
-               "Fedu",
-               "traveltime",
-               "studytime",
-               "failures",
-               ]
+             "Medu",
+                 "Fedu",
+                 "traveltime",
+                 "studytime",
+                  "failures",
+                "famrel",
+                  "freetime",
+                "goout",
+                 "Dalc",
+                "Walc",
+              "health",
+               "absences",
+                "G1",
+                "G2"
+            ]
+
+
+
+
+
             categorical_columns=[  
+                "school",
+                "sex",
                "address",
-               "Pstatus",
                "famsize",
-               "school",
-               "sex",
+               "Pstatus",
+                   "Mjob",
+                   "Fjob",
+                 "reason",
+                "guardian",
+                "schoolsup",
+                 "famsup",
+                "paid",
+               "activities",
+                "nursery",
+                 "higher",
+                 "internet",
+                 "romantic"
                ]
             num_pipeline = Pipeline(steps=[
                     ("imputer", SimpleImputer(strategy="median")),
